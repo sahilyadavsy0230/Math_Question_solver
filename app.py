@@ -14,6 +14,7 @@ st.title('Maths Problem Solver using Google Gemma2 model')
 
 # Sidebar: API key
 groq_api_key = st.sidebar.text_input('Insert Groq API key', type='password')
+st.secrets['groq_api_key']
 
 if not groq_api_key:
     st.info('Please add the Groq API key')
@@ -94,3 +95,4 @@ if st.button('Find Answer'):
             st.chat_message('assistant').write(response)
     else:
         st.error('Please enter a question')
+
